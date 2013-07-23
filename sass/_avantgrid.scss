@@ -1,0 +1,173 @@
+/* Global Variables */
+
+$gutter: 2%;
+$small: 31.25em;
+$medium: 48.875em;
+$m-top: 1em;
+
+/* changing box model on all elemnts */ 
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* This is a list of direct decendant elements that need their right margin adjusting when aligned center or right.*/
+
+$elements: div,header,img,
+  footer,article,section;
+
+//--------------------------------------
+
+
+.grid {
+  margin-left: (0 - $gutter);
+  max-width: 105%; 
+}
+
+.grid-center { 
+  @extend .grid;
+  text-align: center;  
+  
+  & > #{$elements} {  
+    margin-right: 0.125em;
+  } 
+}
+
+.grid-right {
+  @extend .grid;
+  text-align: right; 
+  
+  & > #{$elements} {  
+    margin-right: 0.20em;
+  }
+}
+
+.grid-justify {
+  margin-left: 0;
+  max-width: 105%; 
+  text-align: justify; 
+  
+  &:after{
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+}
+
+
+/* Setting up class names */
+[class*="justify-"] {
+  margin-top: $m-top;
+  overflow: hidden;
+  *overflow: visible;
+  display: block;
+  vertical-align: top;
+  width:  100% ;
+  
+  @media (min-width: $small) { 
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+&:last-of-type {
+  margin-right: -0.1125em; 
+}
+}
+
+[class*="block-"], .block-extend {
+  margin-left: $gutter;
+  margin-right: -0.25em;
+  margin-top: $m-top;
+  overflow: hidden;
+  *overflow: visible;
+  display: block;
+  vertical-align: top;
+  width:  (100% - $gutter);
+  
+  @media (min-width: $small) { 
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; 
+}
+}
+
+
+.block-1-1, .justify-1-1 { 
+  width: (100% - $gutter);
+}
+
+.block-1-2, .justify-1-2 { 
+  @media (min-width: $medium) { 
+  width: (50%- $gutter);}
+}
+
+.block-1-3, .justify-1-3 {
+  @media (min-width: $small) { 
+  width: (33.36% - $gutter);}
+}
+
+.block-2-3, .justify-2-3 {
+  @media (min-width: $small) { 
+  width: (66.666666666% - $gutter); }
+}
+
+.block-1-4, .justify-1-4 {
+  @media (min-width: $small) { 
+  width: (50% - $gutter);}
+@media (min-width: $medium) { 
+width: (25.05% - $gutter);}
+}     
+
+.block-3-4, .justify-3-4 {
+  @media (min-width: $medium) {
+  width: (50% - $gutter);}
+@media (min-width: $small) { 
+width: (74% - $gutter); } 
+}  
+
+.block-1-5, .justify-1-5 { 
+  @media (min-width: $small) { 
+  width: (50% - $gutter);  }  
+@media (min-width: $medium) { 
+width: (20.07% - $gutter);}
+}   
+
+.block-2-5, .justify-2-5 {
+  @media (min-width: $small) { 
+  width: (50% - $gutter);  }  
+@media (min-width: $medium) { 
+width: (40% - $gutter);     }  
+}
+
+.block-3-5, .justify-3-5 {
+  @media (min-width: $medium) {
+  width: (60% - $gutter);}
+}  
+
+.block-4-5, .justify-4-5 {
+  @media (min-width: $medium) { 
+  width: (80% - $gutter);      } 
+}  
+
+
+.block-1-6, .justify-1-6 {
+  @media (min-width: $small) { 
+  width: (33.35% - $gutter);  }  
+@media (min-width: $medium) { 
+width: (16.607% - $gutter);     
+}  
+} 
+
+.block-5-6, .justify-5-6 { 
+  @media (min-width: $medium) { 
+  width: (83.333335% - $gutter);   } 
+} 
+
+

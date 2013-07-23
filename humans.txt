@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Hugo Darby-Brown -- Front End Dev -- @DarbyBrown
+
+# THANKS
+
+    The HTML5 boilerplate dev team for a great foundation for the Avantgrid framework
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
