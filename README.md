@@ -1,5 +1,5 @@
 
-![Avant Grid](http://darbybrown.com/img/avantgrid-logo.png) 
+![Avant Grid](http://darbybrown.com/img/avantgrid-logo.jpg) 
 
 ###A modern Grid Sytem for modern browsers
 
